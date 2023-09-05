@@ -1,5 +1,5 @@
 header{
-    background-color: pink;
+    background-color: #ED419A;
     display: flex;
     justify-content: space-between;
     padding: 20px 10vw;
@@ -16,4 +16,9 @@ header nav ul{
     display: flex;
     list-style: none;
     gap: 15px;
+}
+.barrapesquisa{
+    height: 30px;
+    border: 1px solid #ffffff;
+    width: 200px;
 }

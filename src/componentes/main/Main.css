@@ -1,5 +1,11 @@
 .content-main{
     padding: 50px;
-    display: flex;
-    gap: 15px;
+    display: grid;
+    grid-template-columns:repeat(5,1fr); /*5 significa a quantidade que eu quero que repita/ 1fr= fração da tela*/
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;   /*espaço entre os filmes */
+    background-color: pink;
+    
 }
+
