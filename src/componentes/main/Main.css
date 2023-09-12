@@ -6,6 +6,22 @@
     column-gap: 30px;
     row-gap: 30px;   /*espaço entre os filmes */
     background-color: pink;
-    
 }
+
+.barrapesquisa:focus-visible{
+    outline: 1px solid rgba(0, 0, 255, 0.319);
+}
+
+.pesquisa{
+    padding: 50px;
+}
+
+.barrapesquisa{
+    height: 30px;
+    border: 1px solid #bebebe;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
 
