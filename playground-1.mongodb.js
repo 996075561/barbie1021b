@@ -36,154 +36,332 @@
 // //FIND ({QUERY},{PROJEÇÃO})
 
 
-use("teretreino");
+// use("teretreino");
+// db.dropDatabase();
+// db.createCollection("treino");
+
+// db.treino.insertOne(
+//     {
+//         nome:"Peito e Biceps",
+//         diaSemana:"Segunda",
+//         exercicios:[
+//             {
+//                 nome:"Supino",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Rosca Martelo",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Voador",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Rosca Scott",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+            
+//         ]
+//     }
+// )
+// db.treino.insertOne(
+//     {
+//         nome:"Costas e Tríceps",
+//         diaSemana:"Quarta",
+//         exercicios:[
+//             {
+//                 nome:"Tríceps Polia",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Tríceps Corda",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Pull Down",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Remada Curvada",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Puxada Alta",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Remada Baixa",
+//                 serie:4,
+//                 repeticoes:15
+//             }
+//         ]
+//     }
+// )
+
+// db.treino.insertOne(
+//     {
+//         nome:"Inferiores",
+//         diaSemana:"Terca e Quinta",
+//         exercicios:[
+//             {
+//                 nome:"Leg Press",
+//                 serie:4,
+//                 repeticoes:12
+//             },
+//             {
+//                 nome:"Agachamento",
+//                 serie:4,
+//                 repeticoes:12
+//             },
+//             {
+//                 nome:"Levantamento Terra",
+//                 serie:4,
+//                 repeticoes:12
+//             },
+//             {
+//                 nome:"Panturrilha",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Cadeira Extensora ",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Cadeira Abdutora",
+//                 serie:4,
+//                 repeticoes:15
+//             },
+//             {
+//                 nome:"Cadeira Adutora",
+//                 serie:4,
+//                 repeticoes:15
+//             }
+//         ]
+//     }
+// )
+
+// use("teretreino");
+// db.treino.find({_id:ObjectId("64f744059cf1ed723fdf1117")}) /*buscar pelo id gerado*/
+
+// use("teretreino");
+// db.treino.updateOne(
+//     {_id:ObjectId("64f744059cf1ed723fdf1117")},/*Buscando o que eu quero*/
+//     {
+//          $set:{
+//             diaSemana:"Sexta",    /*o que é para mudar dentro do que pedi anteriormente*/
+//             nome:"Peito e Biceps A"
+//         } 
+//     }
+// ) 
+
+// use("teretreino");
+// db.treino.updateOne(
+//     {_id:ObjectId("64f744059cf1ed723fdf1117"), "exercicios.nome":"Voador"},/*Buscando o que eu quero*/
+//     {
+//          $set:{
+//            "exercicios.$.nome":"Pack Deck"    /*o que é para mudar dentro do que pedi anteriormente*/
+            
+//         } 
+//     }
+// ) 
+
+// use("teretreino");
+// db.treino.updateOne(
+//     {_id:ObjectId("64f744059cf1ed723fdf1117"), "exercicios.nome":"Rosca Scott"},
+//     {
+//          $set:{
+//            "exercicios.$.serie":5,   
+//            "exercicios.$.repeticoes":12
+//         } 
+//     }
+// ) 
+
+
+use("patissier");
 db.dropDatabase();
-db.createCollection("treino");
+db.createCollection("cake")
 
-db.treino.insertOne(
+db.cake.insertOne(
     {
-        nome:"Peito e Biceps",
-        diaSemana:"Segunda",
-        exercicios:[
+        id:"111111111111",
+        nome:"Baunilha",
+        peso:5,
+        preco:150.00,
+        ingredientes:[
             {
-                nome:"Supino",
-                serie:4,
-                repeticoes:15
+                nome:"Ovos",
+                quantidade:3
             },
             {
-                nome:"Rosca Martelo",
-                serie:4,
-                repeticoes:15
+                nome:"Colher de margarina",
+                quantidade:4
             },
             {
-                nome:"Voador",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de trigo",
+                quantidade:3
             },
             {
-                nome:"Rosca Scott",
-                serie:4,
-                repeticoes:15
-            },
-            
-        ]
-    }
-)
-db.treino.insertOne(
-    {
-        nome:"Costas e Tríceps",
-        diaSemana:"Quarta",
-        exercicios:[
-            {
-                nome:"Tríceps Polia",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de leite",
+                quantidade:1.5
             },
             {
-                nome:"Tríceps Corda",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de açucar",
+                quantidade:2
             },
             {
-                nome:"Pull Down",
-                serie:4,
-                repeticoes:15
+                nome:"Colher de fermento",
+                quantidade:1
             },
             {
-                nome:"Remada Curvada",
-                serie:4,
-                repeticoes:15
-            },
-            {
-                nome:"Puxada Alta",
-                serie:4,
-                repeticoes:15
-            },
-            {
-                nome:"Remada Baixa",
-                serie:4,
-                repeticoes:15
+                nome:"Colher de esencia de baunilha",
+                quantidade:1
             }
+
         ]
     }
 )
-
-db.treino.insertOne(
+db.cake.insertOne(
     {
-        nome:"Inferiores",
-        diaSemana:"Terca e Quinta",
-        exercicios:[
+        id:"222222222222",
+        nome:"Chocolate",
+        peso:4,
+        preco:100.00,
+        ingredientes:[
             {
-                nome:"Leg Press",
-                serie:4,
-                repeticoes:12
+                nome:"Ovos",
+                quantidade:3
             },
             {
-                nome:"Agachamento",
-                serie:4,
-                repeticoes:12
+                nome:"Colheres de margarina",
+                quantidade:4
             },
             {
-                nome:"Levantamento Terra",
-                serie:4,
-                repeticoes:12
+                nome:"Copos de trigo",
+                quantidade:3
             },
             {
-                nome:"Panturrilha",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de leite",
+                quantidade:1.5
             },
             {
-                nome:"Cadeira Extensora ",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de açucar",
+                quantidade:2
             },
             {
-                nome:"Cadeira Abdutora",
-                serie:4,
-                repeticoes:15
+                nome:"Colheres de fermento",
+                quantidade:1
             },
             {
-                nome:"Cadeira Adutora",
-                serie:4,
-                repeticoes:15
+                nome:"Copos de chocolate em pó",
+                quantidade:2
             }
+
+        ]
+    }
+)
+db.cake.insertOne(
+    {
+        id:"333333333333",
+        nome:"Laranja",
+        peso:2,
+        preco:70.00,
+        ingredientes:[
+            {
+                nome:"Ovos",
+                quantidade:3
+            },
+            {
+                nome:"Colheres de margarina",
+                quantidade:4
+            },
+            {
+                nome:"Copos de trigo",
+                quantidade:3
+            },
+            {
+                nome:"Copos de leite",
+                quantidade:1.5
+            },
+            {
+                nome:"Copos de açucar",
+                quantidade:2
+            },
+            {
+                nome:"Colheres de fermento",
+                quantidade:1
+            },
+            {
+                nome:"Colheres de esencia de laranja",
+                quantidade:1
+            }
+
         ]
     }
 )
 
-use("teretreino");
-db.treino.find({_id:ObjectId("64f744059cf1ed723fdf1117")}) /*buscar pelo id gerado*/
+db.cake.insertOne(
+    {
+        id:"444444444444",
+        nome:"Fuba",
+        peso:2,
+        preco:70.00,
+        ingredientes:[
+            {
+                nome:"Ovos",
+                quantidade:3
+            },
+            {
+                nome:"Colheres de margarina",
+                quantidade:4
+            },
+            {
+                nome:"Copos de trigo",
+                quantidade:3
+            },
+            {
+                nome:"Copos de leite",
+                quantidade:1.5
+            },
+            {
+                nome:"Copos de açucar",
+                quantidade:2
+            },
+            {
+                nome:"Colheres de fermento",
+                quantidade:1
+            },
+            {
+                nome:"Copos de fuba",
+                quantidade:1
+            }
+
+        ]
+    }
+    
+)
+
+
+//excluir o documento cake com id = 1
+ use("patissier");
+db.cake.deleteOne(
+    {_id:ObjectId("65007fd1b8cd25c1ca186016")}
+)
+
+//listar o nome e o preço de todos os bolos
 
 use("teretreino");
-db.treino.updateOne(
-    {_id:ObjectId("64f744059cf1ed723fdf1117")},/*Buscando o que eu quero*/
-    {
-         $set:{
-            diaSemana:"Sexta",    /*o que é para mudar dentro do que pedi anteriormente*/
-            nome:"Peito e Biceps A"
-        } 
-    }
-) 
+db.patissier.find().limit(0).skip(70) 
 
-use("teretreino");
-db.treino.updateOne(
-    {_id:ObjectId("64f744059cf1ed723fdf1117"), "exercicios.nome":"Voador"},/*Buscando o que eu quero*/
-    {
-         $set:{
-           "exercicios.$.nome":"Pack Deck"    /*o que é para mudar dentro do que pedi anteriormente*/
-            
-        } 
-    }
-) 
-
-use("teretreino");
-db.treino.updateOne(
-    {_id:ObjectId("64f744059cf1ed723fdf1117"), "exercicios.nome":"Rosca Scott"},
-    {
-         $set:{
-           "exercicios.$.serie":5,   
-           "exercicios.$.repeticoes":12
-        } 
-    }
-) 
+//(pesquisar) listar o nome e preço de todos os bolos como preço menor ou igual a 70
