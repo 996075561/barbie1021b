@@ -352,16 +352,42 @@ db.cake.insertOne(
     
 )
 
-
-//excluir o documento cake com id = 1
+//3
  use("patissier");
 db.cake.deleteOne(
     {_id:ObjectId("65007fd1b8cd25c1ca186016")}
 )
-
-//listar o nome e o preço de todos os bolos
-
-use("teretreino");
-db.patissier.find().limit(0).skip(70) 
-
-//(pesquisar) listar o nome e preço de todos os bolos como preço menor ou igual a 70
+//4 
+use("patissier");
+db.cake.find({}, { _id: 0, nome: 1, preco: 1 });
+//5
+use("patissier");
+db.cake.find({ preco: { $lte: 70 } }, { _id: 0, nome: 1, preco: 1 });
+//6
+use("patissier");
+db.cake.updateOne(
+     { _id: ObjectId('65007fd1b8cd25c1ca186017') },
+     {
+        $set: {
+           nome: "Novo Bolo",
+           peso: "Novo Peso",
+        },
+        $push: {
+           ingrediente: {
+              nome: "Novo Ingrediente",
+              quantidade: 1,
+           },
+        },
+     }
+   );
+   //7
+   use("patissier");
+   db.cake.updateOne(
+    {_id: ObjectId('65007fd1b8cd25c1ca186018'),
+"ingrediente.nome": "Ovos"},
+{
+    $set: {
+        "ingredientes.$.quantidade": 3,
+    },
+}
+   );
