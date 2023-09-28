@@ -6,6 +6,7 @@
     column-gap: 30px;
     row-gap: 30px;   /*espaço entre os filmes */
     background-color: pink;
+    min-height: 50vh
 }
 
 .barrapesquisa:focus-visible{

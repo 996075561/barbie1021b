@@ -1,26 +1,28 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
 function Header(){
     
     return(
              <>
         <header>
             <div>
-            {/* <img className='barbies' src= 'barbies.png' alt="" /> */}
+            <Link to= "/"><img src="logo.png" alt="" /></Link>
             </div>
             <nav>
                 <ul>
                    
                     <li>
-                        <a href="#">Página inicial</a>
+        
+                        <Link to= "/">PAGINA INICIAL</Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <Link to= "/sobre">SOBRE</Link>
                     </li>
                     <li>
-                        <a href="#">Notícias</a>
+                        <Link to= "/noticias">NOTICIAS</Link>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <Link to= "/contato">CONTATO</Link>
                     </li>
                 </ul>
             </nav>
